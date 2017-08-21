@@ -14,7 +14,7 @@
 }
 
 @media (min-width: 480px) and (max-width: 799px) {
-    /* Comment this and uncomment transition at custom.css to change popup behaviour */
+    /* Comment this and uncomment transition at commons.css to change popup behaviour */
     .popup-overlay {
         padding-left: 30px;
         width: 100%;

@@ -75,8 +75,8 @@ DropDown.prototype = {
 
 
 $(function () {
-    var dd = new DropDown($('#dd'));
-    var dd2 = new DropDown($('#dd2'));
+    var dd = new DropDown($('.wear-dropdown'));
+    var dd2 = new DropDown($('.rating-dropdown'));
 
     $(document).click(function () {
         // all dropdowns

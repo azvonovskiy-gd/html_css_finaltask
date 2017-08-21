@@ -145,18 +145,18 @@ footer a:hover {
 }
 
 /* Textarea */
-#textarea {
+textarea {
     width: 291px;
     height: 216px;
     border-radius: 5px;
     background-color: #ffffff;
 }
 
-#textarea:focus {
+textarea:focus {
     border: solid 3px rgba(41, 136, 121, 0.41);
 }
 
-#textarea:invalid {
+textarea:invalid {
     border: solid 3px #ff0000;
 }
 
@@ -309,12 +309,6 @@ input:checked + .slider:before {
     pointer-events: auto;
 }
 
-#gender {
-    margin: 0 auto;
-    width: 300px;
-    margin-left: 85px;
-}
-
 .left {
     float: left;
 }
@@ -324,11 +318,14 @@ input:checked + .slider:before {
 }
 
 /*Radio buttons */
-#gender {
+.gender {
+    margin: 0 auto;
     padding-left: 20px;
+    width: 300px;
+    margin-left: 85px;
 }
 
-#gender .fieldgroup {
+.gender .fieldgroup {
     float: left;
     width: 90px;
 }

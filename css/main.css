@@ -7,6 +7,37 @@
     padding-left: 30px;
 }
 
+.filter-row {
+}
+
+.filter-row button {
+    float: right;
+    border: none;
+}
+
+.filter-row button:focus {
+    outline: none;
+}
+
+.filter-row .text-input-regular {
+    margin-right: 31px;
+    float: right;
+    width: 234px;
+    height: 35px;
+    color: #999999;
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    background: url(../images/common/finder.png) no-repeat scroll;
+    background-color: #ffffff;
+    background-position: 99% 50%;
+}
+
+.filter-row .primary-btn-regular {
+    margin-right: 16px;
+}
+
+
 @media (min-width: 1000px) {
     .container {
         width: 1200px;

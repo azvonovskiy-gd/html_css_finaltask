@@ -1,10 +1,10 @@
-var productContent = document.getElementById('product-content');
-var editLink = document.getElementById('edit-link');
-var deleteLink = document.getElementById('delete-link');
-var buyLink = document.getElementById('buy-link');
-var productPopupWindow = document.getElementById('product-popup');
-var deletePopupWindow = document.getElementById('delete-popup');
-var buyPopupWindow = document.getElementById('buy-popup');
+var productContent = document.querySelector(".product-content");
+var editLink = document.querySelector(".edit-link");
+var deleteLink = document.querySelector(".delete-link");
+var buyLink = document.querySelector(".item-container-content .btn");
+var productPopupWindow = document.querySelector(".product-popup");
+var deletePopupWindow = document.querySelector(".delete-popup");
+var buyPopupWindow = document.querySelector(".buy-popup");
 
 editLink.onclick = function () {
     productContent.classList.toggle('blur');
@@ -21,19 +21,19 @@ buyLink.onclick = function () {
     buyPopupWindow.classList.toggle('popup-overlay-visible');
 };
 
-var cancelBtn = document.getElementById('cancel-btn');
+var cancelBtn = document.querySelector(".cancel-btn");
 cancelBtn.onclick = function () {
     productContent.classList.toggle('blur');
     productPopupWindow.classList.toggle('popup-overlay-visible');
 };
 
-var cancelDeletionBtn = document.getElementById('cancel-deletion-btn');
+var cancelDeletionBtn = document.querySelector(".cancel-deletion-btn");
 cancelDeletionBtn.onclick = function () {
     productContent.classList.toggle('blur');
     deletePopupWindow.classList.toggle('popup-overlay-visible');
 };
 
-var continueShoppingBtn = document.getElementById('continue-shopping-btn');
+var continueShoppingBtn = document.querySelector(".continue-shopping-btn");
 continueShoppingBtn.onclick = function () {
     productContent.classList.toggle('blur');
     buyPopupWindow.classList.toggle('popup-overlay-visible');

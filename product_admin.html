@@ -27,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 </head>
 <body>
-<div class="overlay" id="overlay"></div>
+<div class="overlay"></div>
 <header>
     <figure>
         <a href="#" class="cart">
@@ -46,16 +46,16 @@
 <div class="container three-five-opaque">
     <div class="row">
         <div class="twelve columns">
-            <div id="product-popup" class="admin-modal">
+            <div class="admin-modal product-popup">
                 <form class="modal-form" action="#">
                     <h1>Edit “Active Coat Lorem Ipsum Dolor Sit Amet Consectetur ...</h1>
                     <div class="form-content hatching">
                         <div class="left edit-column">
-                            <label>Name:</label>
-                            <input type="text" placeholder="Active Coat Lorem Ipsum Dolor Sit Amet Co..." class="text-input" name="uname" required>
+                            <label for="uname">Name:</label>
+                            <input type="text" placeholder="Active Coat Lorem Ipsum Dolor Sit Amet Co..." id="uname" class="text-input" name="uname" required>
 
-                            <label>Category:</label>
-                            <div class="form-dropdown form-dropdown-white wear-dropdown">
+                            <label for="category">Category:</label>
+                            <div id="category" class="form-dropdown form-dropdown-white wear-dropdown">
                                 <span>Active wear</span>
                                 <ul class="dropdown">
                                     <li><a href="#"><span class="checked">✓</span>Active wear</a></li>
@@ -81,21 +81,21 @@
                                 </div>
                             </fieldset>
 
-                            <label>Description:</label>
-                            <textarea required></textarea>
+                            <label for="description">Description:</label>
+                            <textarea id="description" required></textarea>
                         </div>
                         <div class="right edit-column">
-                            <label>Link to image:</label>
+                            <label for="link">Link to image:</label>
                             <input pattern="^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+/.*$"
-                                   type="text" placeholder="http://i.imgur.com/5wHVR9D.jpg" class="text-input" name="link">
+                                   type="text" placeholder="http://i.imgur.com/5wHVR9D.jpg" id="link" class="text-input" name="link">
 
                             <img src="images/product/clothes.png">
 
-                            <label>Price:</label>
-                            <input type="number" step="0.01" placeholder="47.95" class="text-input" name="price" required>
+                            <label for="price">Price:</label>
+                            <input type="number" step="0.01" placeholder="47.95" id="price" class="text-input" name="price" required>
 
-                            <label>Rating:</label>
-                            <div class="form-dropdown form-dropdown-white rating-dropdown">
+                            <label for="rating">Rating:</label>
+                            <div id="rating" class="form-dropdown form-dropdown-white rating-dropdown">
                                 <span>3</span>
                                 <ul class="dropdown">
                                     <li><a href="#"><span>✓</span>0</a></li>
@@ -110,14 +110,14 @@
                         <div class="clear"></div>
                         <div class="right">
                             <button type="submit" class="right btn primary-btn btn-big">Submit</button>
-                            <button type="button" class="right btn secondary-btn btn-big" id="cancel-btn">Cancel</button>
+                            <button type="button" class="right btn secondary-btn btn-big cancel-btn">Cancel</button>
                         </div>
                         <div class="clear"></div>
                     </div>
                 </form>
             </div>
 
-            <div id="delete-popup" class="admin-modal vertical-center-modal ecuit-modal">
+            <div class="admin-modal vertical-center-modal ecuit-modal delete-popup">
                 <form class="modal-form" action="#">
                     <h1>Are you sure?</h1>
                     <div class="form-content hatching">
@@ -125,20 +125,20 @@
                             Are you sure you want this?</p>
                         <div class="right">
                             <button type="submit" class="right btn primary-btn primary-btn-regular">Submit</button>
-                            <button type="button" class="right btn secondary-btn primary-btn-regular" id="cancel-deletion-btn">Cancel</button>
+                            <button type="button" class="right btn secondary-btn primary-btn-regular cancel-deletion-btn">Cancel</button>
                         </div>
                         <div class="clear"></div>
                     </div>
                 </form>
             </div>
 
-            <div id="buy-popup" class="admin-modal vertical-center-modal ecuit-modal">
+            <div class="admin-modal vertical-center-modal ecuit-modal buy-popup">
                 <form class="modal-form" action="#">
                     <h1>Thank you!</h1>
                     <div class="form-content hatching">
                         <p>You've successfuly purschased this item.</p>
                         <div class="right">
-                            <button type="button" class="right btn primary-btn primary-btn-regular" id="continue-shopping-btn">Continue shopping</button>
+                            <button type="button" class="right btn primary-btn primary-btn-regular continue-shopping-btn">Continue shopping</button>
                         </div>
                         <div class="clear"></div>
                     </div>
@@ -147,7 +147,7 @@
 
             <!-- Main content -->
 
-            <article class="product-content" id="product-content">
+            <article class="product-content">
                 <div class="category-title upper-margin">
                     <a href="#">Back</a>
                     <span>Category:&nbsp;<span class="category-name">Man/Active wear</span></span>
@@ -177,12 +177,12 @@
                                 quam, qui reprehenderit veniam fugiat nemo exercitationem cum minus ipsa
                                 consequuntur. Pariatur totam suscipit, voluptatibus laudantium.</p>
                             <p>You can <a href="#" class="hyperlink-simple">add 5 more</a>. You can also
-                            <a href="#" id="edit-link">edit</a> details or
-                            <a href="#" id="delete-link">delete</a> them.</p>
+                            <a href="#" class="edit-link">edit</a> details or
+                            <a href="#" class="delete-link">delete</a> them.</p>
                         </div>
                         <div class="details">
                             <p class="price">$<span>47.95</span><span> (9 items left)</span></p>
-                            <a href="#" class="btn primary-btn primary-btn-regular" id="buy-link">Buy</a>
+                            <a href="#" class="btn primary-btn primary-btn-regular">Buy</a>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -199,8 +199,8 @@
     </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/jquery-ui.js"></script>
 <script src="js/product-admin.js"></script>
 
 </body>

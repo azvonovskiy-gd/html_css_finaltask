@@ -16,23 +16,23 @@ $(function () {
 });
 
 $(function () {
-    $("#rating-slider-range").slider({
+    $('#rating-slider-range').slider({
         range: true,
         min: 0,
         max: 5,
         values: [0, 2],
         slide: function (event, ui) {
-            $("#rating-slider-range").find("span.ui-slider-handle").each(function (index) {
+            $('#rating-slider-range').find("span.ui-slider-handle").each(function (index) {
                 $(this).html("<b>" + ui.values[index] + "</b>");
             });
         }
     });
-    $("#rating-slider-range").find("span.ui-slider-handle")[0].innerHTML = "<b>" + 0 + "</b>";
-    $("#rating-slider-range").find("span.ui-slider-handle")[1].innerHTML = "<b>" + 2 + "</b>";
+    $('#rating-slider-range').find("span.ui-slider-handle")[0].innerHTML = "<b>" + 0 + "</b>";
+    $('#rating-slider-range').find("span.ui-slider-handle")[1].innerHTML = "<b>" + 2 + "</b>";
 });
 
-var overlay = document.getElementById('popupFilter');
-var filterBtn = document.getElementById('filter-button');
+var overlay = document.querySelector(".popup-overlay");
+var filterBtn = document.querySelector(".filter-row .btn");
 
 filterBtn.onclick = function () {
     overlay.classList.toggle('popup-overlay-visible');
@@ -74,8 +74,7 @@ DropDown.prototype = {
 
 
 $(function () {
-
-    var dd = new DropDown($('#dd'));
+    var dd = new DropDown($('.form-dropdown'));
 
     $(document).click(function () {
         // all dropdowns

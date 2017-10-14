@@ -179,7 +179,7 @@
     height: 678px;
     transition: opacity 500ms;
 
-    visibility: hidden;
+    display: none;
     opacity: 1;
     z-index: 3;
     pointer-events: auto;
@@ -239,11 +239,14 @@
 .edit-column > img {
     width: 343px;
 }
-
 .popup-overlay-visible {
-    visibility: visible;
+    display: block;
     opacity: 1;
+    /* This is needed for element to not take any space */
+    margin-top: -100px;
+    margin-left: -100px;
 }
+
 
 .gender {
     margin: 0;

@@ -1,6 +1,6 @@
 .upper-margin {
     margin: 0 auto;
-    padding-top: 50px;
+    min-height: 50px;
 }
 
 /* Required to remove a space between inline-block elements'  */
